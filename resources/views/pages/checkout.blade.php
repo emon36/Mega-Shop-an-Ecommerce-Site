@@ -56,10 +56,10 @@ $vat = $setting->vat;
 <div class="form-group">
     <ul class="logos_list">
         <li><input type="radio" name="payment" value="stripe"><img src="{{ asset('frontend/images/mastercard.png') }}" style="width: 100px; height: 60px;"> </li>
-
+{{-- 
          <li><input type="radio" name="payment" value="paypal"><img src="{{ asset('frontend/images/paypal.png') }}" style="width: 100px; height: 60px;"> </li>
 
-          <li><input type="radio" name="payment" value="oncash"><img src="{{ asset('frontend/images/delivery.png') }}" style="width: 100px; height: 60px;"> </li>
+          <li><input type="radio" name="payment" value="oncash"><img src="{{ asset('frontend/images/delivery.png') }}" style="width: 100px; height: 60px;"> </li> --}}
         
     </ul>
     
