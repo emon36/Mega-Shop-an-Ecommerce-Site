@@ -39,8 +39,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col d-flex flex-row">
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/phone.png" alt=""></div>+38 068 005 3570</div>
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/mail.png" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/phone.png" alt=""></div>+8801977451259</div>
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/mail.png" alt=""></div><a href="mailto:megashop@gmail.com">megashop@gmail.com</a></div>
 						<div class="top_bar_content ml-auto">
 							@guest
 
@@ -190,7 +190,7 @@
 							<div class="logo"><a href="{{ url('/') }}">Mega Shop</a></div>
 						</div>
 						<div class="footer_title">Got Question? Call Us 24/7</div>
-						<div class="footer_phone">+38 068 005 3570</div>
+						<div class="footer_phone">+8801977451259</div>
 						<div class="footer_contact_text">
 							<p>17 Princess Road, London</p>
 							<p>Grester London NW18JR, UK</p>

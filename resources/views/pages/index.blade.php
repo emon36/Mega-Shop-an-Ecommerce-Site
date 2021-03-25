@@ -98,14 +98,14 @@ $hot = DB::table('products')
 											<div class="deals_item_category"><a href="#">{{$row->brand_name}}</a></div>
 											@if($row->discount_price == NULL)
 											@else
-											<div class="deals_item_price_a ml-auto">{{$row->selling_price}}</div>
+											<div class="deals_item_price_a ml-auto">${{$row->selling_price}}</div>
 											@endif
 										</div>
 										<div class="deals_info_line d-flex flex-row justify-content-start">
 											<div class="deals_item_name">{{ $row->product_name}}</div>
 											@if($row->discount_price == NULL)
 
-											<div class="deals_item_price ml-auto">{{$row->selling_price}}</div>
+											<div class="deals_item_price ml-auto">${{$row->selling_price}}</div>
 											@else
 											@endif
 											@if($row->discount_price != NULL)
@@ -184,10 +184,10 @@ $hot = DB::table('products')
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="{{ $row->image_one }}" style="height:120px; width:140px" alt=""></div>
 											<div class="product_content">
 												@if ($row->discount_price == NUll)
-												<div class="product_price discount">{{$row->selling_price}}</div>
+												<div class="product_price discount">${{$row->selling_price}}</div>
 
 												@else
-												<div class="product_price discount">{{$row->discount_price}} <span> {{$row->selling_price}} </span></div>
+												<div class="product_price discount">${{$row->discount_price}} <span> {{$row->selling_price}} </span></div>
 												@endif 
 												<div class="product_name"><div><a href="{{ route('view-products' , ['id' => $row->id, 'name' => $row->product_name] )}}">{{ $row->product_name }}</a></div></div>
 												<div class="product_extras">
@@ -321,7 +321,7 @@ $hot = DB::table('products')
 										<div class="banner_2_title">  {{$row->product_name}} </div>
 										<div class="banner_2_text">{{$row->brand_name}} </div>
 										<div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i></div>
-										{{$row->selling_price}}
+										${{$row->selling_price}}
 									</div>
 									
 								</div>
@@ -546,53 +546,7 @@ $product = DB::table('products')->where('category_id',$catid)->where('status',1)
 
 	<!-- Adverts -->
 
-	<div class="adverts">
-		<div class="container">
-			<div class="row">
 
-				<div class="col-lg-4 advert_col">
-					
-					<!-- Advert Item -->
-
-					<div class="advert d-flex flex-row align-items-center justify-content-start">
-						<div class="advert_content">
-							<div class="advert_title"><a href="#">Trends 2018</a></div>
-							<div class="advert_text">Lorem ipsum dolor sit amet, consectetur adipiscing Donec et.</div>
-						</div>
-						<div class="ml-auto"><div class="advert_image"><img src="images/adv_1.png" alt=""></div></div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 advert_col">
-					
-					<!-- Advert Item -->
-
-					<div class="advert d-flex flex-row align-items-center justify-content-start">
-						<div class="advert_content">
-							<div class="advert_subtitle">Trends 2018</div>
-							<div class="advert_title_2"><a href="#">Sale -45%</a></div>
-							<div class="advert_text">Lorem ipsum dolor sit amet, consectetur.</div>
-						</div>
-						<div class="ml-auto"><div class="advert_image"><img src="images/adv_2.png" alt=""></div></div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 advert_col">
-					
-					<!-- Advert Item -->
-
-					<div class="advert d-flex flex-row align-items-center justify-content-start">
-						<div class="advert_content">
-							<div class="advert_title"><a href="#">Trends 2018</a></div>
-							<div class="advert_text">Lorem ipsum dolor sit amet, consectetur.</div>
-						</div>
-						<div class="ml-auto"><div class="advert_image"><img src="images/adv_3.png" alt=""></div></div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
 
 	<!-- Trends -->
 
@@ -600,123 +554,10 @@ $product = DB::table('products')->where('category_id',$catid)->where('status',1)
 
 	<!-- Reviews -->
 
-	<div class="reviews">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					
-					<div class="reviews_title_container">
-						<h3 class="reviews_title">Latest Reviews</h3>
-						<div class="reviews_all ml-auto"><a href="#">view all <span>reviews</span></a></div>
-					</div>
-
-					<div class="reviews_slider_container">
-						
-						<!-- Reviews Slider -->
-						<div class="owl-carousel owl-theme reviews_slider">
-							
-							<!-- Reviews Slider Item -->
-							<div class="owl-item">
-								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image"><img src="images/review_1.jpg" alt=""></div></div>
-									<div class="review_content">
-										<div class="review_name">Roberto Sanchez</div>
-										<div class="review_rating_container">
-											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
-										</div>
-										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Reviews Slider Item -->
-							<div class="owl-item">
-								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image"><img src="images/review_2.jpg" alt=""></div></div>
-									<div class="review_content">
-										<div class="review_name">Brandon Flowers</div>
-										<div class="review_rating_container">
-											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
-										</div>
-										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Reviews Slider Item -->
-							<div class="owl-item">
-								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image"><img src="images/review_3.jpg" alt=""></div></div>
-									<div class="review_content">
-										<div class="review_name">Emilia Clarke</div>
-										<div class="review_rating_container">
-											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
-										</div>
-										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Reviews Slider Item -->
-							<div class="owl-item">
-								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image"><img src="images/review_1.jpg" alt=""></div></div>
-									<div class="review_content">
-										<div class="review_name">Roberto Sanchez</div>
-										<div class="review_rating_container">
-											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
-										</div>
-										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Reviews Slider Item -->
-							<div class="owl-item">
-								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image"><img src="images/review_2.jpg" alt=""></div></div>
-									<div class="review_content">
-										<div class="review_name">Brandon Flowers</div>
-										<div class="review_rating_container">
-											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
-										</div>
-										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Reviews Slider Item -->
-							<div class="owl-item">
-								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image"><img src="images/review_3.jpg" alt=""></div></div>
-									<div class="review_content">
-										<div class="review_name">Emilia Clarke</div>
-										<div class="review_rating_container">
-											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
-										</div>
-										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-						<div class="reviews_dots"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	>
+	
 
 	<!-- Brands -->
-
+{{-- 
 	<div class="brands">
 		<div class="container">
 			<div class="row">
@@ -727,7 +568,7 @@ $product = DB::table('products')->where('category_id',$catid)->where('status',1)
 
 						<div class="owl-carousel owl-theme brands_slider">
 							
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands_1.jpg" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="{{asset('frontend/images/brands_1.jpg')}}" alt=""></div></div>
 							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands_2.jpg" alt=""></div></div>
 							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands_3.jpg" alt=""></div></div>
 							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands_4.jpg" alt=""></div></div>
@@ -746,7 +587,7 @@ $product = DB::table('products')->where('category_id',$catid)->where('status',1)
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --}}
 
 	<!-- Newsletter -->
 

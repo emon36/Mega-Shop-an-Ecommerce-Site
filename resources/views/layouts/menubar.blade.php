@@ -50,8 +50,10 @@ $category = DB::table('categories')->get();
 
 							<div class="main_nav_menu ml-auto">
                                 <ul class="standard_dropdown main_nav_dropdown">
-                                    <li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li>
-                                    <li class="hassubs">
+                                    <li><a href="{{url('/')}}">Home<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="{{url('/shop')}}">Shop<i class="fas fa-chevron-down"></i></a></li>
+
+                                    {{-- <li class="hassubs">
                                         <a href="#">Super Deals<i class="fas fa-chevron-down"></i></a>
                                         <ul>
                                             <li>
@@ -66,7 +68,7 @@ $category = DB::table('categories')->get();
                                             <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
                                             <li><a href="#">Menu Item<i class="fas fa-chevron-down"></i></a></li>
                                         </ul>
-                                    </li>
+                                    </li> --}}
                                     <li class="hassubs">
                                         <a href="#">Featured Brands<i class="fas fa-chevron-down"></i></a>
                                         <ul>
@@ -149,9 +151,9 @@ $category = DB::table('categories')->get();
                                     </ul>
                                 </li>
                                 <li class="page_menu_item">
-                                    <a href="#">Home<i class="fa fa-angle-down"></i></a>
+                                    <a href="{{url('/')}}">Home<i class="fa fa-angle-down"></i></a>
                                 </li>
-                                <li class="page_menu_item has-children">
+                                {{-- <li class="page_menu_item has-children">
                                     <a href="#">Super Deals<i class="fa fa-angle-down"></i></a>
                                     <ul class="page_menu_selection">
                                         <li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>
@@ -168,7 +170,7 @@ $category = DB::table('categories')->get();
                                         <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
                                         <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
                                     </ul>
-                                </li>
+                                </li> --}}
                                 <li class="page_menu_item has-children">
                                     <a href="#">Featured Brands<i class="fa fa-angle-down"></i></a>
                                     <ul class="page_menu_selection">
@@ -192,8 +194,8 @@ $category = DB::table('categories')->get();
                             </ul>
                             
                             <div class="menu_contact">
-                                <div class="menu_contact_item"><div class="menu_contact_icon"><img src="{{ asset('public/frontend/images/phone_white.png')}}" alt=""></div>+38 068 005 3570</div>
-                                <div class="menu_contact_item"><div class="menu_contact_icon"><img src="{{ asset('public/frontend/images/mail_white.png')}}" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
+                                <div class="menu_contact_item"><div class="menu_contact_icon"><img src="{{ asset('frontend/images/phone_white.png')}}" alt=""></div>+38 068 005 3570</div>
+                                <div class="menu_contact_item"><div class="menu_contact_icon"><img src="{{ asset('frontend/images/mail_white.png')}}" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
                             </div>
                         </div>
                     </div>

@@ -23,9 +23,9 @@
               <tr>
                 <th class="wd-10p">Product Code</th>
                 <th class="wd-15p">Product Name</th>
-                <th class="wd-15p">Image</th>
-                <th class="wd-15p">Category</th>
-                <th class="wd-15p">Brand</th>
+                <th class="wd-10p">Image</th>
+                <th class="wd-10p">Category</th>
+                
                 <th class="wd-5p">Quantity</th>
                 <th class="wd-10p">Status</th>
                 <th class="wd-10p">Action</th>
@@ -40,7 +40,7 @@
 
            <td> <img src="{{ URL::to($row->image_one) }}" height="50px;" width="50px;"> </td>
                <td>{{ $row->category_name }}</td>
-               <td>  {{ $row->brand_name }}</td>
+               
                <td>{{ $row->product_quantity }}</td>
                <td> 
                 @if($row->status == 1)
